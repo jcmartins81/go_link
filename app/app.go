@@ -21,18 +21,8 @@ func Gerar() *cli.App {
 	}
 
 	app.Commands = []cli.Command{
-		{
-			Name:   "ip",
-			Usage:  "Busca IP's por endereço",
-			Flags:  flags,
-			Action: buscarIps,
-		},
-		{
-			Name:   "servers",
-			Usage:  "Busca o nome dos servidores na internet",
-			Flags:  flags,
-			Action: buscarServidores,
-		},
+		{Name: "ip", Usage: "Busca IP's por endereço", Flags: flags, Action: buscarIps},
+		{Name: "servers", Usage: "Busca o nome dos servidores na internet", Flags: flags, Action: buscarServidores},
 	}
 
 	return app
